@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://ohomburg.de/sitemap.txt

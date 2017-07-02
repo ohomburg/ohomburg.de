@@ -1,5 +1,5 @@
 DEPLOY_DIR=/tmp
-deploy-rules = deploy-root
+deploy-rules = deploy-root deploy-css
 
 styles = css/normalize.css css/main.css
 
@@ -11,6 +11,7 @@ deploy: $(deploy-rules)
 
 deploy-root: $(wildcard *.html) robots.txt sitemap.txt
 	install -d $(DEPLOY_DIR)
+	install -t $(DEPLOY_DIR) -m0444 $?
 
 deploy-css: $(styles)
 	install -d $(DEPLOY_DIR)/css

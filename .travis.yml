@@ -4,6 +4,8 @@ before_install:
 branches:
   only: master
 script: sass --scss --update scss:public/css
+addons:
+  ssh_known_hosts: $DEPLOY_HOST
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_e64e26c049ef_key -iv $encrypted_e64e26c049ef_iv
   -in deploy_rsa.enc -out /tmp/deploy_rsa -d

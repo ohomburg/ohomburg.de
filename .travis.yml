@@ -10,7 +10,6 @@ before_deploy:
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/deploy\_rsa
 - ssh-add /tmp/deploy\_rsa
-- echo "$DEPLOY_HOST_KEY" >> ~/.ssh/known_hosts
 deploy:
 - provider: s3
   region: eu-central-1
@@ -24,7 +23,9 @@ deploy:
     repo: ohomburg/ohomburg.de
 - provider: script
   skip_cleanup: true
-  script: rsync -r --quiet --delete-after public/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+  script:
+    - echo "$DEPLOY_HOST_KEY" >> $HOME/.ssh/known_hosts
+    - rsync -r --quiet --delete-after public/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
   on:
     repo: ohomburg/ohomburg.de
 env:

@@ -84,19 +84,19 @@ footer {
 .zugriff {
   text-align: center;
   &::before {
-      content: ">>";
-      margin-right: 1em;
+    content: ">>";
+    margin-right: 1em;
   }
   &::after {
-      content: "<<";
-      margin-left: 1em;
+    content: "<<";
+    margin-left: 1em;
   }
   &:hover {
-  animation: shake 0.2s infinite;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
+    animation: shake 0.2s infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
 
 }
 
@@ -104,7 +104,7 @@ footer {
   10%, 70% {
     transform: translate3d(-1px, 1px, 0);
   }
-  
+
   20%, 50% {
     transform: translate3d(1px, 2px, 0);
   }

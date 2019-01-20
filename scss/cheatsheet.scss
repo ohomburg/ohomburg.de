@@ -74,14 +74,29 @@ pre {
 }
 
 pre.n {
-    border: none;
-    padding: 0;
+  border: none;
+  padding: 0;
 }
 
-.tag { font-style: normal; font-size: small;}
-.tag:before { border-radius: 5px; padding: 0 4px; margin: 0 1px; }
+.tag {
+  font-style: normal;
+  font-size: small;
+}
 
-.tag-s:before { content: "S"; background: #ffc733; }
-.tag-cc:before { content: "cc"; background: #33d1ff; }
+.tag:before {
+  border-radius: 5px;
+  padding: 0 4px;
+  margin: 0 1px;
+}
+
+.tag-s:before {
+  content: "S";
+  background: #ffc733;
+}
+
+.tag-cc:before {
+  content: "cc";
+  background: #33d1ff;
+}
 
 /* vim: set et shiftwidth=2 tabstop=2 : */

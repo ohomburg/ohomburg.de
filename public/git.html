@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Git+SSH Cheatsheet</title>
-  <link rel="canonical" href="https://ohomburg.de/git.html">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/cheatsheet.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+    <title>Git+SSH Cheatsheet</title>
+    <link rel="canonical" href="https://ohomburg.de/git.html">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/cheatsheet.css">
 </head>
 <body>
 <header class="sec">
     <h1 class="title">Git+SSH Cheatsheet</h1>
-    <small>Send feedback to: <a class="author" href="mailto:oskar@ohomburg.de?subject=[Git Cheatsheet] Feedback">Oskar Homburg</a></small>
+    <small>Send feedback to: <a class="author" href="mailto:oskar@ohomburg.de?subject=[Git Cheatsheet] Feedback">Oskar
+        Homburg</a></small>
 </header>
 <section id="git" class="sec">
     <h2>Git</h2>
@@ -40,21 +41,23 @@
     <section id="merge-rebase">
         <h3>Merge and Rebase</h3>
         <p>Merge = create commit from two parallel tracks of changes; Rebase = Act like changes happened in sequence.
-        Merging is usually faster and works in all situations, but rebase makes the commit history look nicer.</p>
+            Merging is usually faster and works in all situations, but rebase makes the commit history look nicer.</p>
     </section>
 </section>
 <section class="sec">
     <h2>SSH</h2>
     <ul>
         <li><code>ssh <i class=ph>user</i>@<i class=ph>host</i></code></li>
-        <li>Cope to remote: <code>scp <i class=ph>local/file/path.ext</i> <i class=ph>user</i>@<i class=ph>host</i>:<i class=ph>remote/file/path.ext</i></code></li>
-        <li>Cope from remote: <code>scp <i class=ph>user</i>@<i class=ph>host</i>:<i class=ph>remote/file/path.ext</i> <i class=ph>local/file/path.ext</i></code></li>
+        <li>Cope to remote: <code>scp <i class=ph>local/file/path.ext</i> <i class=ph>user</i>@<i class=ph>host</i>:<i
+                class=ph>remote/file/path.ext</i></code></li>
+        <li>Cope from remote: <code>scp <i class=ph>user</i>@<i class=ph>host</i>:<i class=ph>remote/file/path.ext</i>
+            <i class=ph>local/file/path.ext</i></code></li>
         <li>Exiting VIM: <code>[ESC]:q![enter]</code></li>
     </ul>
     <section id="ssh-agent">
         <h3>The SSH-agent</h3>
         <p>If you don't like typing passwords, add this at the end of your
-        <code>.bashrc</code>/<code>.zshrc</code>/<code>.profile</code>: </p>
+            <code>.bashrc</code>/<code>.zshrc</code>/<code>.profile</code>: </p>
         <pre><code>eval "$(ssh-agent)"</code></pre>
         <p> Next, add into your <code>~/.ssh/config</code> (create it if it does not exist): </p>
         <pre><code>AddKeysToAgent yes</code></pre>

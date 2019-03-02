@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+    <title>Git+SSH Cheatsheet</title>
+    <link rel="canonical" href="https://ohomburg.de/git.html">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/cheatsheet.css">
+</head>
+<body>
+<header class="sec">
+    <h1 class="title">Git for git users</h1>
+    <small>Send feedback to: <a class="author" href="mailto:oskar@ohomburg.de?subject=[Git Cheatsheet 2] Feedback">Oskar
+        Homburg</a></small>
+</header>
+<section id="messages" class="sec">
+    <h2>Commit messages</h2>
+    <ul>
+        <li>First line: Imperative subject line (max. 50 chars)</li>
+        <li>One free line</li>
+        <li>Other relevant information, reasoning, explanations, etc.</li>
+    </ul>
+</section>
+<section id="pull" class="sec">
+    <h2>Pulling</h2>
+    <ul>
+        <li>When the server has changes unrelated to yours: <code>git pull --rebase</code></li>
+        <li>When the server has changes and you do not: <code>git pull --ff-only</code></li>
+        <li>Otherwise: <code>git pull</code> (Works always, but sometimes not as pretty)</li>
+    </ul>
+</section>
+</body>
+</html>

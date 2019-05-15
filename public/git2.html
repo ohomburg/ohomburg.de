@@ -26,7 +26,12 @@
 <section id="pull" class="sec">
     <h2>Pulling</h2>
     <ul>
-        <li>When the server has changes unrelated to yours: <code>git pull --rebase</code></li>
+        <li>When the server has changes unrelated to yours: <code>git pull --rebase</code>
+            <ul>
+                <li>Make this the default: <code>git config --bool pull.rebase true</code></li>
+                <li>In this case, <code>git pull --merge</code> can be used to restore previous behavior.</li>
+            </ul>
+        </li>
         <li>When the server has changes and you do not: <code>git pull --ff-only</code></li>
         <li>Otherwise: <code>git pull</code> (Works always, but sometimes not as pretty)</li>
     </ul>

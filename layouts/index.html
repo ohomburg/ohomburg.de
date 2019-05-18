@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="{{ .Site.Language.Lang }}">
 <head>
-    <meta charset="UTF-8">
-    <link rel="canonical" href="https://ohomburg.de/">
-    <title>Oskar Homburg</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="js/B.js"></script>
+    {{ partial "head.html" . }}
+    {{ $style := resources.Get "index.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
 <body>
 <header class="hero">
@@ -29,10 +25,6 @@
         <li>Kann 100m in 9:31 laufen</li>
     </ul>
 </section>
-<footer>
-    Genereller Disclaimer:<br>
-    Der Autor leistet keine Gewähr für die Verfügbarkeit und Korrektheit der dargestellten Sachverhalte.<br>
-    Copyright &copy; 2018 Oskar Homburg
-</footer>
+    {{ partial "footer" . }}
 </body>
 </html>

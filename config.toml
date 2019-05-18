@@ -1,0 +1,6 @@
+baseURL = "http://ohomburg.de/"
+languageCode = "de-de"
+defaultContentLanguage = "de"
+title = "Oskar Homburg"
+enableGitInfo = true
+uglyurls = true

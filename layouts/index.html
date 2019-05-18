@@ -9,22 +9,9 @@
 <header class="hero">
     <h1>Oskar<br>Homoburg</h1>
 </header>
-<section>
-    <p>Hallo und willkommen auf der persönlichen Website von Oskar Homburg!</p>
-    <p>Hier gibt es spannende Inhalte, die der Autor kostenfrei zur freien Verfügung stellt.</p>
-    <p class="zugriff"><a href="https://youtu.be/5LTAMVOEuJs?t=10m30s" target="_blank">GREIFEN SIE JETZT ZU!</a></p>
-</section>
-<section>
-    <p>Einige Fakten über <span class=strike>mich</span> den Autor:</p>
-    <ul>
-        <li>Betreut gekonnt die elegant gestaltete Website <a href="https://guldraeber.de">guldräber.de</a>
-        <li>Hat Keramik studiert</li>
-        <li>Kann nicht jonglieren</li>
-        <li>Wurde nicht von einem Militärtribunal zu Tode verurteilt und dann exekutiert</li>
-        <li>Kann Maschinensprache lesen</li>
-        <li>Kann 100m in 9:31 laufen</li>
-    </ul>
-</section>
-    {{ partial "footer" . }}
+<main>
+{{ .Content }}
+</main>
+{{ partial "footer" . }}
 </body>
 </html>

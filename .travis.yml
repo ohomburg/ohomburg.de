@@ -1,9 +1,12 @@
-language: ruby
-before_install:
-- gem install sass
+language: c
+dist: xenial
+addons:
+  snaps:
+    - name: hugo
+      channel: extended
 branches:
   only: master
-script: sass --scss --update scss:public/css
+script: hugo
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_e64e26c049ef_key -iv $encrypted_e64e26c049ef_iv
   -in deploy_rsa.enc -out /tmp/deploy_rsa -d
@@ -11,20 +14,9 @@ before_deploy:
 - chmod 600 /tmp/deploy\_rsa
 - ssh-add /tmp/deploy\_rsa
 deploy:
-- provider: s3
-  region: eu-central-1
-  local_dir: public
-  access_key_id: AKIAJP2E4GO4OYLOEDHA
-  secret_access_key:
-    secure: VuC6IFSez+JPFJhBCS/f7qLtcZkjILV3dsqwy1V5IxKYLSKZT6UJjcqrRyNkb7YCGRL028XBcPP8K/YrCUJAPdDqrZ1hkC9vKiJuDnlTKVv6xVDsH9jkZwpu+M+vjRxe3NMEQoJrGPZ/LwNK3e5YrFqyjMAWKg6omNLlX6PAK9o/JEkpJ3PhEPOb78fOCWKOg4v87W7KA1GkzquVTJ8SHrqsQbYvDn2ZqsGo6sBidEU39pZTNhRW0qPGJK/EVaupeapKQV/6NpYHOonxG85ILkLXnxIvdzMoHuCbaeSbloJNnF9ZpYjDNYgoei4U7TcFSFuxidhI46/i6i2UEswvgjJZVEhA7wKwG0D+a2I6+4lzvOvI41tvGBNyibN97l23kaDh495uvmgmBTIX6/LZPAGpOQFdK+ivq2C/SjT1w+oAKcTi/PJFGst6843ZskswAQ053C7aTIYQRu0phvLatdE4bsCXUeAmFqg/N6tcbvCV06ldsUHXUC6e4armwWxob2Dl5GaLLJU0p62ZfPNyDRGXvTlLzHI5WzFrM588uq0p0ZvOx8yN4Btgq3twjjl3g5KHRTQeo/PX84MWUzFY1PrlEOZ+rroQq6PyS+bleC0WNWzuc/mqa0/SIW/CpzyGcmUQGd+mfUNYW6DA1Cg/lpwvysA52LMKYsf6273Ww4U=
-  bucket: ohomburg.de
-  acl: public_read
-  on:
-    repo: ohomburg/ohomburg.de
 - provider: script
   skip_cleanup: true
-  script: echo "$DEPLOY_HOST_KEY" >> $HOME/.ssh/known_hosts && rsync -r --quiet --delete-after
-    public/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+  script: echo "$DEPLOY_HOST_KEY" >> $HOME/.ssh/known_hosts && rsync -avz --delete-after public/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
   on:
     repo: ohomburg/ohomburg.de
 env:

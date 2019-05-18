@@ -1,4 +1,5 @@
 <footer>
 Der Autor leistet keine Gewähr für die Verfügbarkeit und Korrektheit der dargestellten Sachverhalte.<br>
 <span class="author">Copyright &copy; {{ now.Format "2006" }} Oskar Homburg</span><br>
+<span class="commit"><a href="https://github.com/ohomburg/ohomburg.de/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a></span>
 </footer>

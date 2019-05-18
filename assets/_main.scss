@@ -8,10 +8,20 @@ body {
   line-height: 1.25;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 .strike {
   text-decoration: line-through;
+}
+
+.commit {
+  a {
+    color: inherit;
+  }
+  text-align: right;
+  display: inline-block;
+  width: 100%;
 }

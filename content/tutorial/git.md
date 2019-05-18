@@ -2,6 +2,7 @@
 url = "/git.html"
 title = "Git+SSH Cheatsheet"
 styles = ["cheatsheet.scss"]
+lang = "en"
 +++
 
 ## Git

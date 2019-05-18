@@ -2,6 +2,7 @@
 url = "/git2.html"
 title = "Git for Git Users"
 styles = ["cheatsheet.scss"]
+lang = "en"
 +++
 
 ## Commit messages

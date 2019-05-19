@@ -8,6 +8,7 @@ branches:
   only: master
 script: hugo
 before_deploy:
+- sudo apt-get install curl
 - openssl aes-256-cbc -K $encrypted_e64e26c049ef_key -iv $encrypted_e64e26c049ef_iv
   -in deploy_rsa.enc -out /tmp/deploy_rsa -d
 - eval "$(ssh-agent -s)"

@@ -13,15 +13,11 @@ before_deploy:
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/deploy\_rsa
 - ssh-add /tmp/deploy\_rsa
+- echo "$DEPLOY_HOST_KEY" >> $HOME/.ssh/known_hosts
 deploy:
 - provider: script
   skip_cleanup: true
-  script: |
-    echo "$DEPLOY_HOST_KEY" >> $HOME/.ssh/known_hosts
-    rsync -avz --delete-after public/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
-    'curl -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" \
-      -H "X-Auth-Email: $CF_EMAIL" -H "X-Auth_Key: $CF_AUTH" -H "Content-Type: application/json" \
-      --data ''{"purge_everything":true}'''
+  script: deploy.sh
   on:
     repo: ohomburg/ohomburg.de
 env:

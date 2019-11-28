@@ -1,5 +1,5 @@
 +++
-title = "Oskar Homburg"
+title = "Oskar Homburg, B. Sc."
 +++
 
 Hallo und willkommen auf der persönlichen Website von Oskar Homburg!
@@ -13,6 +13,7 @@ Einige Fakten über ~~mich~~ den Autor:
 * Betreut gekonnt die elegant gestaltete Website [guldräber.de](https://guldraeber.de)
 * Hat Keramik studiert
 * Kann nicht jonglieren
+* Ist ein Geselle der Wissenschaft
 * Wurde nicht von einem Militärtribunal zu Tode verurteilt und dann exekutiert
 * Kann Maschinensprache lesen
 * Kann 100m in 9:31 laufen

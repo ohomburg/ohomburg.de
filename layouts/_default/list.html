@@ -1,7 +1,13 @@
-{{ define "main" }}
-    {{ range .Pages }}
-    <article>
-        <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
-    </article>
-    {{ end }}
-{{ end }}
+{{ define "headx" }} {{ partial "style.html" "list.scss" }} {{ end }} {{ define "main" }}
+<header>
+    <h1>{{ .Title }}</h1>
+</header>
+{{ with .Content }}
+<main>{{ . }}</main>{{ end }} {{ range .Pages }}
+<article>
+    <a class="article-title" href="{{ .Permalink }}">
+        <h2>{{ .Title }}</h2>
+    </a>
+    {{ .Summary }}
+</article>
+{{ end }} {{ partial "footer.html" . }} {{ end }}

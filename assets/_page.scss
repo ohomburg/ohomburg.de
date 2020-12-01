@@ -1,0 +1,39 @@
+@import "main";
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+main,
+.sec,
+header,
+article {
+    max-width: 1000px;
+    margin: 1em auto;
+    padding: 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+    color: gray;
+    font-size: 16px;
+}

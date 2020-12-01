@@ -1,0 +1,11 @@
+{{ $card_base := 0x1F0A0 }}
+{{ if (eq (.Get 0) "S") | or (eq (.Get 0) "spades") }}
+{{ $card_base = 0x1F0A0 }}
+{{ else if (eq (.Get 0) "H") | or (eq (.Get 0) "hearts") }}
+{{ $card_base = 0x1F0B0 }}
+{{ else if (eq (.Get 0) "D") | or (eq (.Get 0) "diamonds") }}
+{{ $card_base = 0x1F0C0 }}
+{{ else if (eq (.Get 0) "C") | or (eq (.Get 0) "clubs") }}
+{{ $card_base = 0x1F0D0 }}
+{{ end }}
+<span style="font-size: 1.8em;vertical-align: sub; line-height: 0">&#{{ add $card_base (int ( .Get 1 )) }};</span>

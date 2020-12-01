@@ -1,109 +1,75 @@
 @import "main";
-
-body {
-  display:flex;
-  flex-direction: column;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-header {
-  h1 {
-    margin-bottom: 1rem;
-  }
-}
-
-main,
-.sec,
-header {
-  max-width: 1000px;
-  margin: 1em auto;
-  padding: 0 1em;
-  width: 100%;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-footer {
-  flex-shrink: 0;
-  border-top: 1px solid #ccc;
-  padding: 1rem;
-  color: gray;
-  font-size: 16px;
-}
-
+@import "page";
 .ph {
-  color: darken(lime, 27%);
+    color: darken(lime, 27%);
 }
 
 .reg {
-  color: #052366;
+    color: #052366;
 }
 
 li.caution {
-  &::before {
-    content: "[!!!]";
-    font-family: monospace;
-    margin-right: 1ex;
-    padding: 0.2em;
-  }
-  border: 1px solid yellow;
+    &::before {
+        content: "[!!!]";
+        font-family: monospace;
+        margin-right: 1ex;
+        padding: 0.2em;
+    }
+    border: 1px solid yellow;
 }
 
 li.danger {
-  &::before {
-    content: "[!!!]";
-    color: red;
-    font-family: monospace;
-    margin-right: 1ex;
-    padding: 0.2em;
-  }
-  border: 1px solid red;
+    &::before {
+        content: "[!!!]";
+        color: red;
+        font-family: monospace;
+        margin-right: 1ex;
+        padding: 0.2em;
+    }
+    border: 1px solid red;
 }
 
 code {
-  background-color: #e8e8e8;
-  border-radius: 2px;
-  padding: 0.1em;
-  margin: 0.1em;
+    background-color: #e8e8e8;
+    border-radius: 2px;
+    padding: 0.1em;
+    margin: 0.1em;
 }
 
+
 /* Ignore blocks marked as .n for normal */
+
 pre {
-  border: 2px dashed gray;
-  padding: 0.2em;
-  background-color: #e8e8e8;
+    border: 2px dashed gray;
+    padding: 0.2em;
+    background-color: #e8e8e8;
 }
 
 pre.n {
-  border: none;
-  padding: 0;
+    border: none;
+    padding: 0;
 }
 
 .tag {
-  font-style: normal;
-  font-size: small;
+    font-style: normal;
+    font-size: small;
 }
 
 .tag:before {
-  border-radius: 5px;
-  padding: 0 4px;
-  margin: 0 1px;
+    border-radius: 5px;
+    padding: 0 4px;
+    margin: 0 1px;
 }
 
 .tag-s:before {
-  content: "S";
-  background: #ffc733;
+    content: "S";
+    background: #ffc733;
 }
 
 .tag-cc:before {
-  content: "cc";
-  background: #33d1ff;
+    content: "cc";
+    background: #33d1ff;
 }
+
 
 /* vim: set et shiftwidth=2 tabstop=2 : */

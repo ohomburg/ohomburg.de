@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Params.lang | default .Site.Language.Lang }}">
+
 <head>
-    {{- partial "head.html" . -}}
+    {{ partial "head.html" . }} {{ block "headx" . }} {{ end }}
 </head>
+
 <body>
-    {{- block "main" . }}{{- end }}
+    {{ block "main" . }}{{ end }}
 </body>
+
 </html>

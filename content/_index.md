@@ -14,6 +14,5 @@ Einige Fakten über ~~mich~~ den Autor:
 * Hat Keramik studiert
 * Kann nicht jonglieren
 * Ist ein Geselle der Wissenschaft
-* Wurde nicht von einem Militärtribunal zu Tode verurteilt und dann exekutiert
 * Kann Maschinensprache lesen
 * Kann 100m in 9:31 laufen

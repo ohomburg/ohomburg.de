@@ -22,7 +22,7 @@ Klassisch werden pro Teilnehmer(in) sechs Würfel benötigt. Es kann aber auch m
 ## Regeln
 
 Zu Beginn erhalten die Spielteilnehmer jeweils sechs Würfel, die beiseite gelegt werden.
-Es ist auch möglcih
+Es ist auch möglich, mit nur einem Würfel zu spielen (siehe [Punktenotation](#punktenotation)).
 
 Reihum wird gewürfelt. Nach jedem Wurf muss der/die Spieler(in) die gewürfelte Zahl
 eindeutig einem Faktor von eins bis einschließlich sechs zuordnen. Derselbe Faktor kann

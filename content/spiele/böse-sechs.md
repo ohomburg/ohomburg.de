@@ -25,7 +25,7 @@ Eventuell bekannt aus "Schlag den Raab" als "Würfeln".
 ## Varianten
 
 * Das Spiel kann verkürzt oder verlängert werden, indem die Gewinnpunktzahl geändert wird
-* Die "Böse Zahl" kann geändert werden. Dadurch wird das Spiel meistens leicht kürzer
+* Die "Böse Zahl" kann geändert werden. Dadurch wird das Spiel meistens leicht kürzer.
 * Nachzug: Wenn ein(e) Spieler(in) 50 Punkte oder mehr erreicht, sind alle anderen noch einmal dran, egal wo die Runde angefangen hat
     * Variante: alle sind noch einmal dran, also auch die Person, die zuerst 50 erreicht hat
 * Zwei (oder mehr) Würfel: Es wird immer mit zwei Würfeln gewürfelt. Wenn einer eine {{<die 6>}} zeigt, ist die Serie verloren.

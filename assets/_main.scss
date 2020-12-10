@@ -1,27 +1,41 @@
 html {
-  font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body {
-  line-height: 1.25;
+    line-height: 1.25;
 }
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 .strike {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .commit {
-  a {
-    color: inherit;
-  }
-  text-align: right;
-  display: inline-block;
-  width: 100%;
+    a {
+        color: inherit;
+    }
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+th,
+td {
+    padding: 0 0.5em;
+    border-left: solid thin;
+}
+
+tbody tr:nth-child(2n+1) {
+    background-color: #eee;
 }

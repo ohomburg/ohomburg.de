@@ -19,8 +19,11 @@ lang = "en"
 
 ### Branch
 
-* create: `git checkout -b new-branch`
-* (CAUTION) reset when broken: `git reset --hard @{u}` (DANGER)
+* Create: `git checkout -b new-branch`
+* Change branches: `git switch branchname`
+* Change back to previous branch: `git switch -`
+* Reset when broken: `git reset --hard @{u}`
+     * Warning: this can only be undone using the reflog
 
 ### Merge and Rebase
 
@@ -30,8 +33,8 @@ Merging is usually faster and works in all situations, but rebase makes the comm
 ## SSH
 
 * `ssh user@host`
-* Cope to remote: `scp local/file/path user@host:remote/file/path`
-* Cope from remote: `scp user@host:remote/file/path local/file/path`
+* Copy to remote: `scp local/file/path user@host:remote/file/path`
+* Copy from remote: `scp user@host:remote/file/path local/file/path`
 * Exiting VIM: `[ESC]:q![enter]`
 
 ### Public key authentication
